@@ -1,28 +1,14 @@
-# Originality audit
+# Originality and collision audit
 
-The final source was compared against 161 GenLayer
-contract sources in the workspace. All twenty new target contracts were excluded
-from the pre-existing comparison pool.
+EstimateEnvelope was checked against the user's accepted GenLayer Intelligent Contract inventory before selection for the week of 2026-09-28. No prior accepted or pending entry uses its combination of a fixed estimator panel, AI rationale-to-range coherence, full-panel seal condition, and deterministic numeric envelope.
 
-Nearest pre-existing source: `rulebender\contracts\policy_amendment_chain.py`
+The closest accepted concepts remain materially different:
 
-Combined structural score: `0.20854`
+- ChangePointWatch detects semantic changes across successive observations; EstimateEnvelope aggregates a one-time panel of numeric ranges.
+- FlowDispatch allocates work; EstimateEnvelope neither schedules nor assigns work.
+- Rubric Calibration Lock calibrates evaluation rubrics; EstimateEnvelope evaluates estimate rationales under an owner-supplied policy.
+- Agent Output Grounding Verifier and Digital Deliverable Verifier judge evidence or deliverables; EstimateEnvelope does not verify sources or artifacts.
 
-Token score: `0.339956`
+The other finalist, AuditStrata, uses a commit–seal–reveal seed to sample classified audit records. It has different inputs, roles, lifecycle, semantic decision, deterministic algorithm, storage, and result.
 
-AST score: `0.110177`
-
-Nearest contract in this new set: `condorcetagenda\contracts\condorcet_agenda.py` with combined
-score `0.315692`. That score reflects shared safe GenLayer
-boilerplate. The mechanisms differ materially:
-
-- This repository: Consensus checks whether each numeric range is supported by its rationale; deterministic order statistics seal a median envelope after quorum.
-- Other repository: Consensus compiles each narrative preference into a complete ranking; deterministic strongest-path comparison chooses the pairwise winner.
-
-The two do not share the same semantic input, deterministic algorithm, storage
-record, state lifecycle, or decision views. Exact source SHA-256 values are also
-unique across all twenty repositories. The complete machine-readable reports are
-`review-tools/twenty-originality-audit.json` and
-`review-tools/twenty-pairwise-audit.json` at the workspace level.
-
-Similarity scoring is a review aid, not a guarantee of a human review outcome.
+The exact source SHA-256 is `c59dbc01cb2cde31826ab5cc564feb41e60312de5ed06295f927abf2e78bf614`. Similarity review reduces accidental duplication risk but cannot guarantee a program review outcome.

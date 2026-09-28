@@ -1,8 +1,5 @@
 # StudioNet deployment evidence
 
-`studionet.json` binds `contracts/estimate_envelope.py` at SHA-256
-`5820e5584cd2711fefaa1f5193d4049fc2fcf0539b1ea535a4a88ff254b16f09` to a finalized StudioNet deployment, a real intelligent write,
-latest-final state, exact deployed-source bytes, the generated schema, and five
-unique public test-role addresses. It contains no private key.
+`studionet.json` binds `contracts/estimate_envelope.py` at SHA-256 `c59dbc01cb2cde31826ab5cc564feb41e60312de5ed06295f927abf2e78bf614` to a finalized StudioNet deployment and complete three-wallet open/submit/submit/seal flow. It records every transaction, validator-majority counts, latest-final `SEALED` state, both coherent submissions, required schema methods, and byte-for-byte deployed-source equality. It contains public addresses and transaction hashes only—no wallet secret.
 
-Contract explorer: https://explorer-studio.genlayer.com/address/0xEDBd4ad70eaA34a33e8d5bC39f4f3397DF1A4712
+Contract explorer: https://explorer-studio.genlayer.com/address/0x75a349Ee228dcDC3b186e8e26A78fd8ed9590037

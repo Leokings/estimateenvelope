@@ -1,22 +1,22 @@
-# Submission review checklist
+# Audit checklist
 
-- [x] One production Intelligent Contract source
-- [x] Concrete GenVM runner hash pinned
-- [x] All development dependencies exactly pinned
+- [x] Production Intelligent Contract source with pinned runner
+- [x] Explicit 2–15 wallet estimator panel
+- [x] Distinct, nonzero, non-owner panel validation
+- [x] Only named estimators may submit, once each
+- [x] Full-panel completion before owner seal
+- [x] Quorum and deterministic lower-median envelope
 - [x] Bounded inputs and deterministic loops
-- [x] Untrusted-input prompt boundary
-- [x] Exact JSON output normalization
+- [x] Explicit untrusted-input prompt boundaries
+- [x] Exact one-boolean model-output schema
 - [x] Custom validator for the nondeterministic operation
-- [x] Direct negative-path and invariant tests
-- [x] Exactly five-validator integration test
-- [x] Finalized StudioNet intelligent write
+- [x] 16 direct negative-path and invariant tests
+- [x] Five-validator integration test
+- [x] Finalized three-wallet StudioNet flow through `SEALED`
 - [x] Latest-final persisted readback
 - [x] Exact deployed-source SHA-256 verification
 - [x] Deployed schema verification
-- [x] Repository-specific external wallets
 - [x] No private key, mnemonic, or populated environment file
-- [x] Workspace-wide originality and internal pairwise audit
-- [x] Reusable mechanism and off-chain boundary documented
-- [x] Prepared for private publication to Leokings/estimateenvelope
-- [ ] Ensure reviewers have read access to private GitHub evidence
-- [ ] Submit the contribution through the portal
+- [x] Residual Sybil, policy, liveness, truth, and public-data assumptions documented
+- [ ] Grant reviewers access to the private repository or make it public
+- [ ] Submit through the contribution portal

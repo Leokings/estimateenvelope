@@ -1,64 +1,68 @@
 {
-  "batch": "A",
-  "contract_address": "0xEDBd4ad70eaA34a33e8d5bC39f4f3397DF1A4712",
-  "contract_source": {
-    "deployed_source_sha256": "5820e5584cd2711fefaa1f5193d4049fc2fcf0539b1ea535a4a88ff254b16f09",
-    "path": "contracts/estimate_envelope.py",
-    "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
-    "source_exact_for_deployment": true,
-    "source_sha256": "5820e5584cd2711fefaa1f5193d4049fc2fcf0539b1ea535a4a88ff254b16f09"
-  },
-  "deployment_transaction_hash": "0xf94759b7dde74bb5ea32cf0d1184c2ad7776eb9abe597895b9c971e8ebee071b",
-  "explorer": {
-    "contract": "https://explorer-studio.genlayer.com/address/0xEDBd4ad70eaA34a33e8d5bC39f4f3397DF1A4712",
-    "deployment_transaction": "https://explorer-studio.genlayer.com/tx/0xf94759b7dde74bb5ea32cf0d1184c2ad7776eb9abe597895b9c971e8ebee071b",
-    "intelligent_transaction": "https://explorer-studio.genlayer.com/tx/0x20ca55f8c973b37dccc3472d21b89b9f7737368221cfa9ba0e3e8ac3c92aff7f"
-  },
-  "intelligent_transaction_hash": "0x20ca55f8c973b37dccc3472d21b89b9f7737368221cfa9ba0e3e8ac3c92aff7f",
+  "schema": "genlayer-intelligent-contract-deployment/v2",
+  "repository": "estimateenvelope",
   "network": {
-    "chain_id": 61999,
     "name": "studionet",
+    "chain_id": 61999,
     "rpc": "https://studio.genlayer.com/api"
   },
-  "repository": "estimateenvelope",
-  "schema": "genlayer-intelligent-contract-deployment/v2",
-  "setup_transaction_hashes": [
-    "0xcc0fdde9d0304f99a747fcc53d699db487b0538a792325bf83ed11b0d73ac6d5"
+  "verified_at": "2026-09-28T09:04:05.978803+00:00",
+  "contract_address": "0x75a349Ee228dcDC3b186e8e26A78fd8ed9590037",
+  "deployment_transaction_hash": "0xaf0a5ec33f6b7a32df21e46ce0035ef13ae5815ac164ac81482dcecf7ae5891f",
+  "contract_source": {
+    "path": "contracts/estimate_envelope.py",
+    "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+    "source_sha256": "c59dbc01cb2cde31826ab5cc564feb41e60312de5ed06295f927abf2e78bf614",
+    "deployed_source_sha256": "c59dbc01cb2cde31826ab5cc564feb41e60312de5ed06295f927abf2e78bf614",
+    "source_exact_for_deployment": true
+  },
+  "wallet_addresses": {
+    "owner": "0x797d3B25fB2cCA0Ff93F60df1910267f3822D655",
+    "estimator_1": "0x2B630000A9F4a1CDa40803Cae8CF80Dc9141d21b",
+    "estimator_2": "0x9e0Bf5212Ce79BFC1827Ee64e59652654D5b9B6e"
+  },
+  "transactions": [
+    {"method": "deploy", "hash": "0xaf0a5ec33f6b7a32df21e46ce0035ef13ae5815ac164ac81482dcecf7ae5891f", "status": "FINALIZED", "result": "MAJORITY_AGREE", "agreeing_votes": 5, "validator_votes": 5},
+    {"method": "open_estimate", "hash": "0x0624b1384631e091c9abd7fcd8ffa45ab981502d3c5d6fb0a68f030f2ac6064c", "status": "FINALIZED", "result": "MAJORITY_AGREE", "agreeing_votes": 3, "validator_votes": 5},
+    {"method": "submit_range", "wallet_role": "estimator_1", "hash": "0xf892c1fcc0c8278f387efa73054707c547e430686c32f7f124da64178668d533", "status": "FINALIZED", "result": "MAJORITY_AGREE", "agreeing_votes": 3, "validator_votes": 5},
+    {"method": "submit_range", "wallet_role": "estimator_2", "hash": "0xdb8d64e2eb6f7a55d03375eb90c5d032d59ca8c36509bfd7623bfd7c92c3b504", "status": "FINALIZED", "result": "MAJORITY_AGREE", "agreeing_votes": 3, "validator_votes": 5},
+    {"method": "seal_envelope", "hash": "0x0c25aa3ccdf92e03d77cf92ab27f4674f263fdc14d306111da2fc2c09c8d3abd", "status": "FINALIZED", "result": "MAJORITY_AGREE", "agreeing_votes": 3, "validator_votes": 5}
   ],
-  "source": {
-    "deployed_source_sha256": "5820e5584cd2711fefaa1f5193d4049fc2fcf0539b1ea535a4a88ff254b16f09",
+  "verification": {
+    "execution_success": true,
+    "validator_majority_checked": true,
+    "minimum_agreeing_votes_observed": 3,
+    "latest_final_readback": true,
+    "deployed_source_exact": true,
+    "schema_read": true,
     "schema_methods_verified": [
       "accepted_total",
+      "get_estimate",
+      "get_submission",
+      "open_estimate",
       "seal_envelope",
       "submit_range"
     ],
-    "source_sha256": "5820e5584cd2711fefaa1f5193d4049fc2fcf0539b1ea535a4a88ff254b16f09"
-  },
-  "tooling": {
-    "genlayer_test": "0.29.2",
-    "genvm_linter": "0.11.0",
-    "pyright": "1.1.411",
-    "pytest": "9.1.1",
-    "studionet_poll_interval_ms": 6000
-  },
-  "verification": {
-    "deployed_source_exact": true,
-    "execution_success": true,
-    "latest_final_readback": true,
     "observed": {
-      "accepted_count": 0,
-      "state": "COLLECTING"
-    },
-    "schema_read": true,
-    "status": "FINALIZED"
+      "estimate_id": "0x797d3b25fb2cca0ff93f60df1910267f3822d655:BRIDGE-SPAN-HOURS-2026-09-28",
+      "schema": "estimateenvelope/estimate/v2",
+      "state": "SEALED",
+      "panel_size": 2,
+      "submission_count": 2,
+      "accepted_count": 2,
+      "quorum": 2,
+      "envelope": [20, 40, 70],
+      "submissions": [
+        {"submitter": "0x2B630000A9F4a1CDa40803Cae8CF80Dc9141d21b", "range": [20, 40, 70], "coherent": true},
+        {"submitter": "0x9e0Bf5212Ce79BFC1827Ee64e59652654D5b9B6e", "range": [30, 50, 80], "coherent": true}
+      ]
+    }
   },
-  "verified_at": "2026-08-25T21:44:06.245065Z",
-  "wallet_addresses": [
-    "0xfec1abc1f93b1bcAe9dDACa035d18307Ae990c0b",
-    "0xD4D7e7Ed615A5438559F5ac7E1133f17912ae176",
-    "0x7c134f0172498235520F670C48bBdc15D01fe532",
-    "0x08Fd75705133f5D0f20Cd9AC70A50eED7175A3d6",
-    "0xAC34Aaa4FeE7D25AD0719ebC059CaFF385ea4bB7"
-  ],
-  "wallet_policy": "repository-specific disposable bundle outside workspace; no cross-repository reuse"
+  "explorer": {
+    "contract": "https://explorer-studio.genlayer.com/address/0x75a349Ee228dcDC3b186e8e26A78fd8ed9590037",
+    "deployment_transaction": "https://explorer-studio.genlayer.com/tx/0xaf0a5ec33f6b7a32df21e46ce0035ef13ae5815ac164ac81482dcecf7ae5891f",
+    "intelligent_transaction": "https://explorer-studio.genlayer.com/tx/0xf892c1fcc0c8278f387efa73054707c547e430686c32f7f124da64178668d533",
+    "seal_transaction": "https://explorer-studio.genlayer.com/tx/0x0c25aa3ccdf92e03d77cf92ab27f4674f263fdc14d306111da2fc2c09c8d3abd"
+  },
+  "wallet_policy": "Owner and two named estimators are distinct unlocked test wallets loaded from the OS credential vault; no private key or mnemonic is stored in this repository."
 }

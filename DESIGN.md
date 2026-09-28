@@ -1,33 +1,21 @@
-# Design boundary
+# Design
 
-## Mechanism fingerprint
+## Mechanism
 
-Consensus checks whether each numeric range is supported by its rationale; deterministic order statistics seal a median envelope after quorum.
+EstimateEnvelope separates the semantic and deterministic work. Validators decide only whether a rationale supports its submitted low, midpoint, and high under the stored question, unit, and policy. The contract normalizes that answer to exact JSON `{"coherent": bool}`.
 
-This is the contract's reusable mechanism, not a renamed domain wrapper.
+The deterministic layer authorizes a precommitted panel, accepts one submission per wallet, stores rejected and accepted submissions, enforces full-panel completion and quorum, and computes a component-wise lower median across accepted ranges.
 
-## Consensus boundary
+## State machine
 
-Validators reproduce the coherence decision that controls acceptance; the explanatory quality band may differ without changing the gate.
+`COLLECTING` → `SEALED`.
 
-Every model response is normalized to an exact JSON shape, bounded list sizes,
-closed indexes or bands, and deterministic ordering before it can affect state.
-Inputs are explicitly framed as untrusted data rather than instructions.
+Only named estimators may submit. Every panel member must submit before the owner can seal. This keeps the membership fixed and prevents an owner from choosing a favorable stopping point. A rejected rationale consumes that wallet's one response and cannot be edited; clients should preview and review public inputs carefully.
 
-## On-chain responsibilities
+## Deterministic envelope
 
-- validate bounded public inputs and isolate wallet roles;
-- run the one semantic operation through GenLayer consensus;
-- execute the mechanism-specific deterministic algorithm;
-- persist independently keyed records and expose typed views;
-- reject duplicate actions and invalid state transitions.
+Accepted lows, midpoints, and highs are sorted separately. For each list, index `(n - 1) // 2` is stored. This is the ordinary median for odd `n` and the lower median for even `n`. Because every accepted range satisfies `low <= midpoint <= high`, the resulting component-wise quantiles remain ordered.
 
 ## Off-chain responsibilities
 
-User interface, login, private drafts, source collection, provenance display,
-notifications, analytics, and any real-world action remain off-chain.
-
-## Non-goals
-
-No payment, custody, identity attestation, legal ruling, physical verification,
-professional advice, or guarantee that caller-supplied facts are true.
+Real-world identity, expertise, panel independence, source collection, private drafts, notifications, statistical interpretation, and actions based on the envelope remain off-chain.
